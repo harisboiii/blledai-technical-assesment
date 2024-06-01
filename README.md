@@ -27,7 +27,7 @@ pip install -r requirements.txt
 # After downloading dependencies run this command to run the application:
 
 ```
-uvicorn app:app --reload
+uvicorn users:app --reload
 ```
 
 # Running with Docker
