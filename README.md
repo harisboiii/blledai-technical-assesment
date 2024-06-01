@@ -35,7 +35,6 @@ uvicorn users:app --reload
 2. Run the following command to build and start the application:
 
 ```
-docker build -t bleed-ai .
 docker run -p 8000:8000 bleed-ai
 ```
 
