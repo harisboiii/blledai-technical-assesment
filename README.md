@@ -1,14 +1,19 @@
-# blledai-technical-assesment
+## Demo video link https://www.loom.com/share/9ab447ab84814e2ba1a1c9926701d777
 
-## Demo video link 
+## For any queries email at: mohibovais79@gmail.com
 
-## Email at harisjamal01@icloud.com for any difficulties
+# bleed-ai
+Python Developer Technical Assessment
+
+
+# FastAPI Application
 
 ## Setup and Installation
 
 ### Conda Environment
 1. Clone this repository.
-2. Create and activate a new Conda environment:
+2. Install Conda.
+3. Create and activate a new Conda environment:
 
 Run these commands to  activate conda environment with all libraries installed
 
@@ -33,6 +38,7 @@ uvicorn app:app --reload
 2. Run the following command to build and start the application:
 
 ```
+docker build -t bleed-ai .
 docker run -p 8000:8000 bleed-ai
 ```
 
