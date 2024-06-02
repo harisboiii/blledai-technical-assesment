@@ -1,9 +1,7 @@
 Demo video: https://www.loom.com/share/0041577268d144c4891470f364bf38ae
 
-Python Developer Technical Assessment
 
 
-# FastAPI Application
 
 ## Setup and Installation
 
@@ -18,7 +16,6 @@ Run these commands to  activate conda environment with all libraries installed
 conda env create -f environment.yml
 conda activate myenv
 ```
-# Alternatively if you only want the required libraries  run this command:
 
 ```
 pip install -r requirements.txt
@@ -38,13 +35,6 @@ uvicorn users:app --reload
 docker run -p 8000:8000 bleed-ai
 ```
 
-# Contributing
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/my-feature`).
-3. Commit your changes (`git commit -am 'Add new feature'`).
-4. Push to the branch (`git push origin feature/my-feature`).
-5. Create a new Pull Request.
 
 
 
