@@ -34,6 +34,11 @@ def get_db():
 
 
 class UserRequest(BaseModel):
+     """
+
+    Attributes:
+        name (str): The name of the user.
+    """
     name: str = Field(min_length=1)
 
 
@@ -43,6 +48,16 @@ def read_api(db: Session = Depends(get_db)):
 
 
 @app.post("/")
+ """
+    Create a new user.
+
+    Args:
+        user (User): The user details.
+        db (Session): The database session.
+
+    Returns:
+        User: The created user.
+    """
 def create_user(user: UserRequest, db: Session = Depends(get_db)):
     user_model = models.User(name=user.name)
     db.add(user_model)
@@ -52,6 +67,17 @@ def create_user(user: UserRequest, db: Session = Depends(get_db)):
 
 
 @app.put("/{user_id}")
+ """
+    Update a user by ID.
+
+    Args:
+        user_id (int): The ID of the user to update.
+        user (User): The updated user details.
+        db (Session): The database session.
+
+    Returns:
+        User: The updated user.
+    """
 def update_user(user_id: int, user: UserRequest, db: Session = Depends(get_db)):
     user_model = db.query(models.User).filter(models.User.id == user_id).first()
 
@@ -80,6 +106,7 @@ def delete_user(user_id: int, db: Session = Depends(get_db)):
 
 # Endpoint to process an uploaded image
 @app.post("/process_image/")
+
 async def process_image(file: UploadFile = File(...)):
     """
     Process an uploaded image by detecting faces and returning the processed image.
